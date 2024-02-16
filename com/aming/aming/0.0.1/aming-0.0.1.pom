@@ -61,6 +61,15 @@
 
 
 		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<!-- 配置本地打包后的本地仓库存储地址，后续上传jar包会从此仓库中去取 -->
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/maven-repository</altDeploymentRepository>
+				</configuration>
+			</plugin>
+
+		<plugin>
 			<groupId>com.github.github</groupId>
 			<artifactId>site-maven-plugin</artifactId>
 			<version>0.12</version>
