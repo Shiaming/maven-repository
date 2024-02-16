@@ -25,6 +25,10 @@
 <build>
 
 	<plugins>
+		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+			</plugin>
 		<!--该插件识别java代码 否则自己在Project Structure设置-->
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -50,15 +54,15 @@
 				</execution>
 			</executions>
 		</plugin>
-		<plugin>
-			<artifactId>maven-deploy-plugin</artifactId>
-			<configuration>
-				<altDeploymentRepository>
-					internal.repo::default::file://${project.build.directory}/maven-repository
-				</altDeploymentRepository>
-			</configuration>
-		</plugin>
 
+		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<!-- 配置本地打包后的本地仓库存储地址，后续上传jar包会从此仓库中去取 -->
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/maven-repository</altDeploymentRepository>
+				</configuration>
+			</plugin>
 
 		<plugin>
 			<groupId>com.github.github</groupId>
@@ -69,7 +73,7 @@
 				<message>Maven artifacts for ${project.version}</message>
 				<noJekyll>true</noJekyll>
 				<outputDirectory>${project.build.directory}/maven-repository</outputDirectory><!--本地jar地址-->
-				<branch>refs/heads/main</branch><!--分支-->
+				<branch>refs/heads/repo-branch</branch><!--分支-->
 				<merge>true</merge>
 				<includes>
 					<include>**/*</include>
