@@ -1,0 +1,403 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.aming</groupId>
+  <artifactId>aming</artifactId>
+  <version>0.0.1</version>
+  	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.2.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+		<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<github.global.server>github</github.global.server>
+	</properties>
+  	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+ 
+		 
+	<!--	<dependency>
+			<groupId>com.alibaba.otter</groupId>
+			<artifactId>canal.client</artifactId>
+			<version>1.0.25</version>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		  
+		  
+		  <dependency>
+		  		<groupId>org.apache.poi</groupId>
+		  		<artifactId>poi-ooxml</artifactId>
+		  		<version>3.16</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>io.minio</groupId>
+		  		<artifactId>minio</artifactId>
+		  		<version>8.5.1</version>
+		  		<version>7.1.4</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>com.github.ulisesbocchio</groupId>
+		  		<artifactId>jasypt-spring-boot-starter</artifactId>
+		  		<version>3.0.3</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>org.junit.platform</groupId>
+		  		<artifactId>junit-platform-launcher</artifactId>
+		  		<version>1.3.1</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>org.apache.commons</groupId>
+		  		<artifactId>commons-pool2</artifactId>
+		  		<version>2.8.0</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>org.apache.httpcomponents</groupId>
+		  		<artifactId>httpmime</artifactId>
+		  		<version>4.5.7</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>com.github.pagehelper</groupId>
+		  		<artifactId>pagehelper-spring-boot-starter</artifactId>
+		  		<version>1.3.1</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>io.github.openfeign</groupId>
+		  		<artifactId>feign-httpclient</artifactId>
+		  		<version>10.10.1</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>mysql</groupId>
+		  		<artifactId>mysql-connector-java</artifactId>
+		  		<version>8.0.28</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>com.baomidou</groupId>
+		  		<artifactId>mybatis-plus-boot-starter</artifactId>
+		  		<version>3.4.3.4</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>org.springframework.cloud</groupId>
+		  		<artifactId>spring-cloud-starter-openfeign</artifactId>
+		  		<version>2.2.6.RELEASE</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>com.google.guava</groupId>
+		  		<artifactId>guava</artifactId>
+		  		<version>29.0-jre</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>cn.hutool</groupId>
+		  		<artifactId>hutool-all</artifactId>
+		  		<version>5.7.20</version>
+		  </dependency>
+		  <dependency>
+		  		<groupId>org.projectlombok</groupId>
+		  		<artifactId>lombok</artifactId>
+		  		<version>1.18.10</version>
+		  </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-actuator</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>com.github.jsqlparser</groupId>
+				<artifactId>jsqlparser</artifactId>
+				<version>4.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-openfeign-core</artifactId>
+				<version>2.2.6.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.nacos</groupId>
+				<artifactId>nacos-client</artifactId>
+				<version>2.0.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-gateway</artifactId>
+				<version>2.2.6.RELEASE</version>
+			</dependency>
+					<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-openfeign</artifactId>
+				<version>2.2.6.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
+				<version>2.2.6.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+				<version>2.2.6.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+				<version>2.2.6.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+				<version>2.2.6.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba.csp</groupId>
+				<artifactId>sentinel-datasource-nacos</artifactId>
+				<version>1.8.1</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-boot-starter</artifactId>
+				<version>3.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nimbusds</groupId>
+				<artifactId>nimbus-jose-jwt</artifactId>
+				<version>8.18.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-client</artifactId>
+				<version>4.9.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-acl</artifactId>
+				<version>4.9.4</version>
+			</dependency>
+			<dependency>
+				<groupId>com.aliyun.oss</groupId>
+				<artifactId>aliyun-sdk-oss</artifactId>
+				<version>3.13.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
+				</dependency>
+				<dependency>
+						<groupId>com.thoughtworks.xstream</groupId>
+						<artifactId>xstream</artifactId>
+						<version>1.4.10</version>
+				</dependency>
+				<dependency>
+						<groupId>org.codehaus.jackson</groupId>
+						<artifactId>jackson-core-asl</artifactId>
+						<version>1.9.5</version>
+				</dependency>
+				<dependency>
+						<groupId>org.codehaus.jackson</groupId>
+						<artifactId>jackson-mapper-asl</artifactId>
+						<version>1.9.5</version>
+				</dependency>
+				<dependency>
+						<groupId>net.bytebuddy</groupId>
+						<artifactId>byte-buddy</artifactId>
+						</dependency>
+						<dependency>
+									<groupId>commons-lang</groupId>
+									<artifactId>commons-lang</artifactId>
+									<version>2.6</version>
+						</dependency>
+						<dependency>
+									<groupId>org.apache.commons</groupId>
+									<artifactId>commons-lang3</artifactId>
+									<version>3.12.0</version>
+						</dependency>
+						         xxl-job-core 
+        <dependency>
+            <groupId>com.xuxueli</groupId>
+            <artifactId>xxl-job-core</artifactId>
+            <version>2.3.1</version>
+        </dependency>-->
+        
+      <!--  <dependency>
+            <groupId>com.tccbms</groupId>
+            <artifactId>tccbmsframe</artifactId>
+            <version>1.0.1</version>
+        </dependency>-->
+        
+	  </dependencies>
+	
+<build>
+
+	<plugins>
+		<!--该插件识别java代码 否则自己在Project Structure设置-->
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<configuration>
+				<source>${java.version}</source>
+				<target>${java.version}</target>
+				<encoding>UTF-8</encoding>
+			</configuration>
+		</plugin>
+	<!--	<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>-->
+
+		<!-- 要将源码放上去，需要加入这个插件 -->
+		<plugin>
+			<artifactId>maven-source-plugin</artifactId>
+			<configuration>
+				<attach>true</attach>
+			</configuration>
+			<executions>
+				<execution>
+					<phase>compile</phase>
+					<goals>
+						<goal>jar</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+
+		<!--参考  https://www.jianshu.com/p/98a141701cc7-->
+<!--Error creating blob: Git Repository is empty. (409)   仓库里随便创建下文件-->
+
+
+		<plugin>
+			<artifactId>maven-deploy-plugin</artifactId>
+			<configuration>
+				<altDeploymentRepository>
+					internal.repo::default::file://${project.build.directory}/maven-repository
+				</altDeploymentRepository>
+			</configuration>
+		</plugin>
+
+
+		<plugin>
+			<groupId>com.github.github</groupId>
+			<artifactId>site-maven-plugin</artifactId>
+			<version>0.12</version>
+			<configuration>
+				<server>github</server>
+				<message>Maven artifacts for ${project.version}</message>
+				<noJekyll>true</noJekyll>
+				<outputDirectory>${project.build.directory}/maven-repository</outputDirectory><!--本地jar地址-->
+				<branch>refs/heads/main</branch><!--分支-->
+				<merge>true</merge>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<repositoryName>maven-repository</repositoryName><!--对应github上创建的仓库名称 name-->
+				<repositoryOwner>Shiaming</repositoryOwner><!--github 仓库所有者-->
+			</configuration>
+			<executions>
+				<execution>
+					<goals>
+						<goal>site</goal>
+					</goals>
+					<phase>deploy</phase>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+</build>
+</project>
+	  
+	  
+	<!--  <build>
+		  <plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		  </plugins>
+		  
+		  
+	  </build>
+	  
+	
+	  
+	  <repositories>
+		  
+		<repository>
+			
+			<id>p${env.PUBLIC}</id>
+			<id>2454334-release-JpeQcY</id>
+			<name>local private nexus</name>
+			<url>https://packages.aliyun.com/maven/repository/2454334-release-JpeQcY/</url>
+			<url>https://618cfdc1ef8c7acec3be4369:B)cSh_oE-Q((@packages.aliyun.com/maven/repository/2454334-release-JpeQcY/</url>
+			<url>https://618cfdc1ef8c7acec3be4369@B)cSh_oE-Q(@packages.aliyun.com/maven/repository/2454334-snapshot-CQymFn/</url>
+						<url>http://admin:loujiang123@139.159.248.120:20000/repository/maven-public/</url>
+			 <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+		</repository>
+	</repositories>
+	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>public</id>
+			<name>local private nexus</name>
+		<url>https://618cfdc1ef8c7acec3be4369:B)cSh_oE-Q((@packages.aliyun.com/maven/repository/2454334-release-JpeQcY/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	 打包私服 
+	<distributionManagement>
+		<repository>
+			<id>public</id>
+			<name>releases</name>
+			<url>https://618cfdc1ef8c7acec3be4369:B)cSh_oE-Q((@packages.aliyun.com/maven/repository/2454334-release-JpeQcY/</url>
+		</repository>
+		<snapshotRepository>
+			<id>public</id>
+			<name>snapshots</name>
+			<url>https://618cfdc1ef8c7acec3be4369:B)cSh_oE-Q((@packages.aliyun.com/maven/repository/2454334-release-JpeQcY/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	  
+</project>-->
